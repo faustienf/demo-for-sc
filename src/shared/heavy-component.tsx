@@ -5,5 +5,7 @@ export const HeavyComponent = ({ duration }: { duration: number }) => {
     diff = Date.now() - start;
   }
 
+  console.log('render', diff);
+
   return null;
 };
