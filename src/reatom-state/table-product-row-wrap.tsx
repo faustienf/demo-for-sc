@@ -1,9 +1,10 @@
+import { AtomMut } from '@reatom/framework';
 import { useAtom } from '@reatom/npm-react';
-import { ProductAtom, TableProductRow } from '../entities/product';
+import { Product, TableProductRow } from '../entities/product';
 import { ChangeEvent } from 'react';
 
 type Props = {
-  product: ProductAtom;
+  product: AtomMut<Product>;
 };
 
 export const TableProductRowWrap = ({ product }: Props) => {

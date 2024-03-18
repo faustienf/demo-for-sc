@@ -1,5 +1,3 @@
-import { AtomMut } from '@reatom/framework';
-
 export type Product = {
   id: string;
   name: string;
@@ -8,5 +6,3 @@ export type Product = {
   fat: number;
   protein: number;
 };
-
-export type ProductAtom = AtomMut<Product>;

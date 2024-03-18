@@ -1,6 +1,6 @@
-import { LocalState } from './LocalState';
-import { ReduxState } from './ReduxState';
-import { ReatomState } from './ReatomState';
+import { LocalState } from './local-state';
+import { ReduxState } from './redux-state';
+import { ReatomState } from './reatom-state';
 
 function App() {
   return (

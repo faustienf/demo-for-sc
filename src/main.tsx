@@ -4,7 +4,7 @@ import { createCtx, connectLogger } from '@reatom/framework';
 import { reatomContext } from '@reatom/npm-react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
-import { store } from './ReduxState/store.ts';
+import { store } from './redux-state/store.ts';
 
 import './index.css';
 

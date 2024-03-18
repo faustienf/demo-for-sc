@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
-import { atom } from '@reatom/framework';
+import { AtomMut, atom } from '@reatom/framework';
 import { useCtx, useAtom } from '@reatom/npm-react';
 import {
-  ProductAtom,
+  Product,
   TableProductColumns,
   TableProductPlaceholders,
   generateProduct,
@@ -13,7 +13,7 @@ import { TableCaption } from '../shared/table-caption';
 import { Button } from '../shared/button';
 import { TableProductRowWrap } from './table-product-row-wrap';
 
-const productsAtom = atom<ProductAtom[]>([]);
+const productsAtom = atom<AtomMut<Product>[]>([]);
 
 export const ReatomState = () => {
   const ctx = useCtx();
