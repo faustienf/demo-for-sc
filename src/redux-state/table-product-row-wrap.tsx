@@ -18,7 +18,7 @@ export const TableProductRowWrap = ({ product }: Props) => {
       productsSlice.actions.update({
         ...product,
         [el.name]: value,
-      })
+      }),
     );
   };
 

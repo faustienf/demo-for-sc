@@ -21,8 +21,8 @@ export const LocalState = () => {
   const handleChangeProduct = useCallback((nextProduct: Product) => {
     setProducts((state) =>
       state.map((currentProduct) =>
-        currentProduct.id === nextProduct.id ? nextProduct : currentProduct
-      )
+        currentProduct.id === nextProduct.id ? nextProduct : currentProduct,
+      ),
     );
   }, []);
 

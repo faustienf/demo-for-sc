@@ -1,2 +1,2 @@
-export * from "./redux-state";
-export * from "./store";
+export * from './redux-state';
+export * from './store';

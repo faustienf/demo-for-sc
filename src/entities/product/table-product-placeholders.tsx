@@ -1,12 +1,12 @@
-import { memo } from "react";
-import { Product } from "./types";
+import { memo } from 'react';
+import { Product } from './types';
 
 const columns: Array<keyof Product> = [
-  "name",
-  "calories",
-  "carbs",
-  "fat",
-  "protein",
+  'name',
+  'calories',
+  'carbs',
+  'fat',
+  'protein',
 ];
 
 export const TableProductPlaceholders = memo(
@@ -24,5 +24,5 @@ export const TableProductPlaceholders = memo(
         ))}
       </>
     );
-  }
+  },
 );

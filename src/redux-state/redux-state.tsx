@@ -9,11 +9,11 @@ import { Table } from '../shared/table';
 import { TableCaption } from '../shared/table-caption';
 import { Button } from '../shared/button';
 import { useAppDispatch, useAppSelector } from './store';
-import { productsSlice } from './products-slice';
+import { getProducts, productsSlice } from './products-slice';
 import { TableProductRowWrap } from './table-product-row-wrap';
 
 export const ReduxState = () => {
-  const products = useAppSelector((state) => state.products);
+  const products = useAppSelector(getProducts);
   const dispatch = useAppDispatch();
 
   const handleAddProduct = useCallback(() => {

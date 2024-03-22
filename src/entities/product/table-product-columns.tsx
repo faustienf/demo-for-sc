@@ -1,12 +1,12 @@
-import { memo } from "react";
-import { Product } from "./types";
+import { memo } from 'react';
+import { Product } from './types';
 
-export const columns: Array<Exclude<keyof Product, "id">> = [
-  "name",
-  "calories",
-  "carbs",
-  "fat",
-  "protein",
+export const columns: Array<Exclude<keyof Product, 'id'>> = [
+  'name',
+  'calories',
+  'carbs',
+  'fat',
+  'protein',
 ];
 
 export const TableProductColumns = memo(() => {
