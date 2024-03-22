@@ -7,7 +7,7 @@ type Props = {
   product: AtomMut<Product>;
 };
 
-export const TableProductRowWrap = ({ product }: Props) => {
+export const TableProduct = ({ product }: Props) => {
   const [productState, setProductState] = useAtom(product);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

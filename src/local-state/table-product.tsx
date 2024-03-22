@@ -6,7 +6,7 @@ type Props = {
   onChange: (nextProduct: Product) => void;
 };
 
-export const TableProductRowWrap = ({ product, onChange }: Props) => {
+export const TableProduct = ({ product, onChange }: Props) => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const el = e.target;
     const value = el.type === 'number' ? el.valueAsNumber : el.value;

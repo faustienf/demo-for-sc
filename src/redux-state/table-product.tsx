@@ -1,13 +1,13 @@
 import { ChangeEvent } from 'react';
 import { Product, TableProductRow } from '../entities/product';
-import { productsSlice } from './products-slice';
+import { model } from './model.ts';
 import { useAppDispatch } from './store';
 
 type Props = {
   product: Product;
 };
 
-export const TableProductRowWrap = ({ product }: Props) => {
+export const TableProduct = ({ product }: Props) => {
   const dispatch = useAppDispatch();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -15,7 +15,7 @@ export const TableProductRowWrap = ({ product }: Props) => {
     const value = el.type === 'number' ? el.valueAsNumber : el.value;
 
     dispatch(
-      productsSlice.actions.update({
+      model.actions.update({
         ...product,
         [el.name]: value,
       }),

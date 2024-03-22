@@ -9,7 +9,7 @@ import { Page } from '../shared/page';
 import { Table } from '../shared/table';
 import { TableCaption } from '../shared/table-caption';
 import { Button } from '../shared/button';
-import { TableProductRowWrap } from './table-product-row-wrap';
+import { TableProduct } from './table-product.tsx';
 
 export const LocalState = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -38,7 +38,7 @@ export const LocalState = () => {
         </thead>
         <tbody>
           {products.map((product) => (
-            <TableProductRowWrap
+            <TableProduct
               key={product.id}
               product={product}
               onChange={handleChangeProduct}

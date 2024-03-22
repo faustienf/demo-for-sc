@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Product } from '../entities/product';
 import type { RootState } from './store.ts';
 
-export const productsSlice = createSlice({
+export const model = createSlice({
   name: 'products',
   initialState: [] as Product[],
   reducers: {

@@ -9,15 +9,15 @@ import { Table } from '../shared/table';
 import { TableCaption } from '../shared/table-caption';
 import { Button } from '../shared/button';
 import { useAppDispatch, useAppSelector } from './store';
-import { getProducts, productsSlice } from './products-slice';
-import { TableProductRowWrap } from './table-product-row-wrap';
+import { getProducts, model } from './model.ts';
+import { TableProduct } from './table-product.tsx';
 
 export const ReduxState = () => {
   const products = useAppSelector(getProducts);
   const dispatch = useAppDispatch();
 
   const handleAddProduct = useCallback(() => {
-    dispatch(productsSlice.actions.add(generateProduct()));
+    dispatch(model.actions.add(generateProduct()));
   }, [dispatch]);
 
   return (
@@ -32,7 +32,7 @@ export const ReduxState = () => {
         </thead>
         <tbody>
           {products.map((product) => (
-            <TableProductRowWrap key={product.id} product={product} />
+            <TableProduct key={product.id} product={product} />
           ))}
           {products.length < 1 && <TableProductPlaceholders rowsCount={1} />}
         </tbody>

@@ -11,7 +11,7 @@ import { Page } from '../shared/page';
 import { Table } from '../shared/table';
 import { TableCaption } from '../shared/table-caption';
 import { Button } from '../shared/button';
-import { TableProductRowWrap } from './table-product-row-wrap';
+import { TableProduct } from './table-product.tsx';
 
 const productsAtom = atom<AtomMut<Product>[]>([]);
 
@@ -35,7 +35,7 @@ export const ReatomState = () => {
         </thead>
         <tbody>
           {products.map((product) => (
-            <TableProductRowWrap key={ctx.get(product).id} product={product} />
+            <TableProduct key={ctx.get(product).id} product={product} />
           ))}
           {products.length < 1 && <TableProductPlaceholders rowsCount={1} />}
         </tbody>
