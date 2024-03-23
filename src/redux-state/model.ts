@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSelector } from 'reselect';
 import { Product } from '../entities/product';
 import type { RootState } from './store.ts';
 
@@ -14,4 +15,7 @@ export const productsSlice = createSlice({
   },
 });
 
-export const getProducts = (state: RootState) => state.products;
+export const getProducts = createSelector(
+  (state: RootState) => state.products,
+  (products) => products,
+);
