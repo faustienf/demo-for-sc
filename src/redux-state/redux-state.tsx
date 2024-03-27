@@ -9,11 +9,11 @@ import { Table } from '../shared/table';
 import { TableCaption } from '../shared/table-caption';
 import { Button } from '../shared/button';
 import { useAppDispatch, useAppSelector } from './store';
-import { getProducts, productsSlice } from './model.ts';
+import { getLatestProducts, productsSlice } from './model.ts';
 import { TableProduct } from './table-product.tsx';
 
 export const ReduxState = () => {
-  const products = useAppSelector(getProducts);
+  const products = useAppSelector(getLatestProducts);
   const dispatch = useAppDispatch();
 
   const handleAddProduct = useCallback(() => {

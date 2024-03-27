@@ -15,7 +15,8 @@ export const productsSlice = createSlice({
   },
 });
 
-export const getProducts = createSelector(
-  (state: RootState) => state.products,
-  (products) => products,
+export const getProducts = (state: RootState) => state.products;
+
+export const getLatestProducts = createSelector(getProducts, (products) =>
+  products.slice(0, 3),
 );

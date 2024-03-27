@@ -10,6 +10,7 @@ import { Table } from '../shared/table';
 import { TableCaption } from '../shared/table-caption';
 import { Button } from '../shared/button';
 import { TableProduct } from './table-product.tsx';
+import { useHeavyCalculation } from './use-heavy-calculation.ts';
 
 export const LocalState = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -26,6 +27,8 @@ export const LocalState = () => {
     );
   }, []);
 
+  useHeavyCalculation(products.length);
+
   return (
     <Page>
       <Table>
@@ -37,9 +40,9 @@ export const LocalState = () => {
           <TableProductColumns />
         </thead>
         <tbody>
-          {products.map((product) => (
+          {products.map((product, index) => (
             <TableProduct
-              key={product.id}
+              key={index}
               product={product}
               onChange={handleChangeProduct}
             />
